@@ -17,6 +17,7 @@ void PlayCheck(PlayControl *NoteCont)  //Call this repeatedly!
 {
   if (NoteCont->notearref == (NoteStruct *) 0) return;
   if ((NoteCont->toneref)->isPlaying()) return;
+  if (!NoteCont->playing) return;
   uint16_t n = NoteCont->playpos;
   if (NoteCont->notearref[n].frequency != 0)
   {
